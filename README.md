@@ -1,6 +1,6 @@
-# ascii
+# ASCII
 
-a collection of ascii art from the world wide web
+A collection of ASCII art from the world wide web!
 
 
 ```
@@ -36,3 +36,5 @@ a collection of ascii art from the world wide web
                       `!^"'
 
 ```
+
+https://en.wikipedia.org/wiki/ASCII
