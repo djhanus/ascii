@@ -38,3 +38,21 @@ A collection of ASCII art from the world wide web!
 ```
 
 https://en.wikipedia.org/wiki/ASCII
+
+## Running an HTTP Server with Python
+
+To quickly serve files in this directory over HTTP, you can use Python's built-in HTTP server. Follow these steps:
+
+```bash
+cd /Users/toast/Documents/ascii
+python3 -m http.server
+```
+
+Access at: [http://localhost:8000](http://localhost:8000)
+
+To use a different port:
+```bash
+python3 -m http.server 8080
+```
+
+Access at: [http://localhost:8080](http://localhost:8080)
