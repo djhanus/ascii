@@ -16,9 +16,27 @@ async function loadAsciiArt() {
                 const artDiv = document.createElement('div');
                 artDiv.className = 'ascii-art';
                 artDiv.textContent = content;
+                artDiv.style.padding = '30px 60px';
+                artDiv.style.maxWidth = '720px';
+                artDiv.style.width = 'auto';
 
                 // Append the ASCII art to the container
                 container.appendChild(artDiv);
+
+                // Create a p tag to display the filename
+                const fileNameTag = document.createElement('p');
+                fileNameTag.className = 'ascii-filename';
+                fileNameTag.textContent = file;
+                fileNameTag.style.padding = '5px';
+                fileNameTag.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+                fileNameTag.style.marginTop = '0px';
+                fileNameTag.style.marginLeft = '10px';
+                fileNameTag.style.textAlign = 'left';
+                fileNameTag.style.color = 'white';
+                artDiv.style.textAlign = 'center';
+
+                // Append the filename below the ASCII art
+                container.appendChild(fileNameTag);
             } catch (error) {
                 console.error(`Error loading file ${file}:`, error);
             }
