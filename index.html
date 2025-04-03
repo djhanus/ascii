@@ -5,47 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple web page for the ASCII project.">
     <title>ASCII</title>
-    <style>
-        /* Custom CSS for monospace font */
-        body {
-            font-family: "Courier New", Courier, monospace;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
-            background-color: #f4f4f4;
-            overflow-y: auto;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin: 1rem 0;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 2rem;
-        }
-        .ascii-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 1rem;
-        }
-        .ascii-art {
-            white-space: pre;
-            background: #fff;
-            border: 1px solid #ccc;
-            padding: 1rem;
-            margin: 1rem 0;
-            width: 90%;
-            max-width: 800px;
-            overflow-x: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <h1>ASCII</h1>
@@ -53,41 +13,6 @@
     <div class="ascii-container" id="ascii-container">
         <!-- ASCII art will be dynamically loaded here -->
     </div>
-    <script>
-        async function loadAsciiArt() {
-            const container = document.getElementById('ascii-container');
-            try {
-                const response = await fetch('./art/');
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const files = Array.from(doc.querySelectorAll('a'))
-                    .map(link => link.getAttribute('href'))
-                    .filter(name => name.endsWith('.asc'))
-                    .sort((a, b) => a.localeCompare(b));
-    
-                for (const file of files) {
-                    if (file.endsWith('.asc')) {
-                        // Fetch the content of each .asc file from the root directory
-                        const fileResponse = await fetch(`./art/${file}`);
-                        const content = await fileResponse.text();
-    
-                        // Create a div to display the ASCII art
-                        const artDiv = document.createElement('div');
-                        artDiv.className = 'ascii-art';
-                        artDiv.textContent = content;
-    
-                        // Append the ASCII art to the container
-                        container.appendChild(artDiv);
-                    }
-                }
-            } catch (error) {
-                console.error('Error loading ASCII art:', error);
-            }
-        }
-    
-        // Load ASCII art on page load
-        loadAsciiArt();
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

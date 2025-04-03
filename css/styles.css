@@ -1,0 +1,43 @@
+/* Custom CSS for monospace font */
+body {
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.ascii-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.ascii-art {
+    white-space: pre;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 90%;
+    max-width: 800px;
+    overflow-x: auto;
+}
