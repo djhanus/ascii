@@ -33,7 +33,6 @@ async function loadAsciiArt() {
                 fileNameTag.style.marginLeft = '10px';
                 fileNameTag.style.textAlign = 'left';
                 fileNameTag.style.color = 'white';
-                artDiv.style.textAlign = 'center';
 
                 // Append the filename below the ASCII art
                 container.appendChild(fileNameTag);
