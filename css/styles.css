@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: var(--ctp-latte-base);
     overflow-y: auto;
 }
 
@@ -37,28 +37,26 @@ p {
     align-items: center;
     margin-bottom: 2.5rem;
     width: 100%;
-}
 
-.ascii-art {
-    white-space: pre;
-    background: #fff;
-    border: 1px solid #808080;
-    padding: 1rem;
-    margin: 1rem 0 2rem;
-    width: 90%;
-    max-width: 800px;
-    overflow-x: auto;
-    box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.10);
-    padding: 30px 60px;
-    max-width: 720px;
-    width: auto;
-}
+    .ascii-art {
+        white-space: pre;
+        border: 1px solid var(--ctp-latte-surface0);
+        background: #fff; 
+        margin: 1rem 0 2rem;
+        padding: 30px 60px;
+        max-width: 800px;
+        width: auto;
+        box-shadow: 8px 8px 3px color-mix(in srgb, var(--ctp-latte-overlay0), transparent 50%);
+        overflow-x: auto;
+    }
 
-.ascii-filename {
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 1);
-    margin-top: 0px;
-    margin-left: 10px;
-    text-align: left;
-    color: white;
+    .ascii-filename {
+        padding: 6px 4px;
+        background-color: var(--ctp-latte-mantle);
+        margin-top: 0px;
+        margin-left: 10px;
+        text-align: left;
+        color: white;
+        line-height: 1.5;
+    }
 }
