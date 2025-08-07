@@ -1,4 +1,4 @@
-/* Custom CSS for monospace font */
+/* CSS */
 body {
     font-family: "Courier New", Courier, monospace;
     margin: 0;
@@ -10,6 +10,8 @@ body {
     height: 100vh;
     background-color: var(--ctp-latte-base);
     overflow-y: auto;
+    color: var(--ctp-latte-text);
+    margin-top: 2.5rem;
 }
 
 h1 {
@@ -19,8 +21,18 @@ h1 {
 
 p {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--ctp-latte-text);
     margin-bottom: 3rem;
+}
+
+pre.intro-ascii {
+    /* font-family: 'Fira Mono', monospace;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    white-space: pre-wrap; */
+    color: var(--ctp-latte-lavender);
 }
 
 .ascii-container {
@@ -38,21 +50,25 @@ p {
     margin-bottom: 2.5rem;
     width: 100%;
 
+    /* ASCII FRAME */
     .ascii-art {
+        border: 1px solid var(--ctp-latte-mauve);
+        color: var(--ctp-latte-text);
         white-space: pre;
-        border: 1px solid var(--ctp-latte-surface0);
         background: #fff; 
         margin: 1rem 0 2rem;
-        padding: 30px 60px;
+        padding: 2rem 4rem;
         max-width: 800px;
+        font-size:1.25rem;
         width: auto;
-        box-shadow: 8px 8px 3px color-mix(in srgb, var(--ctp-latte-overlay0), transparent 50%);
         overflow-x: auto;
+        box-shadow: 8px 8px 3px color-mix(in srgb, var(--ctp-latte-overlay0), transparent 50%);
     }
 
+    /* LABEL */
     .ascii-filename {
         padding: 6px 4px;
-        background-color: var(--ctp-latte-mantle);
+        background-color: var(--ctp-frappe-crust);
         margin-top: 0px;
         margin-left: 10px;
         text-align: left;
@@ -60,3 +76,5 @@ p {
         line-height: 1.5;
     }
 }
+
+/* https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md */
