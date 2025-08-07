@@ -1,4 +1,15 @@
-/* CSS */
+/*
+ @@@@@@@   @@@@@@    @@@@@@
+@@@@@@@@  @@@@@@@   @@@@@@@
+!@@       !@@       !@@
+!@!       !@!       !@!
+!@!       !!@@!!    !!@@!!
+!!!        !!@!!!    !!@!!!
+:!!            !:!       !:!
+:!:           !:!       !:!
+ ::: :::  :::: ::   :::: ::
+ :: :: :  :: : :    :: : :
+*/
 body {
     font-family: "Courier New", Courier, monospace;
     margin: 0;
@@ -11,7 +22,7 @@ body {
     background-color: var(--ctp-latte-base);
     overflow-y: auto;
     color: var(--ctp-latte-text);
-    margin-top: 2.5rem;
+    margin-top: 3rem;
 }
 
 h1 {
@@ -22,16 +33,25 @@ h1 {
 p {
     font-size: 1.2rem;
     color: var(--ctp-latte-text);
-    margin-bottom: 3rem;
+}
+
+p.url {
+    margin: 0.25rem 1rem 1.75rem 1rem;
+    a {
+        font-size: 1rem;
+        color: var(--ctp-latte-blue);
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 pre.intro-ascii {
-    /* font-family: 'Fira Mono', monospace;
-    font-size: 1.2rem;
-    text-align: center;
+    font-size: 1.125rem;
     margin: 0 auto;
     padding: 1rem;
-    white-space: pre-wrap; */
+    white-space: pre-wrap;
     color: var(--ctp-latte-lavender);
 }
 
@@ -41,13 +61,14 @@ pre.intro-ascii {
     align-items: center;
     width: 100%;
     padding: 1rem;
+    margin-top: 3rem;
 }
 
 .ascii-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     width: 100%;
 
     /* ASCII FRAME */
