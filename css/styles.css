@@ -95,6 +95,42 @@ pre.intro-ascii {
         text-align: left;
         color: white;
         line-height: 1.5;
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive styles for .ascii-art */
+@media (max-width: 768px) {
+    .ascii-card .ascii-art {
+        max-width: 95vw;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    .ascii-card .ascii-filename {
+        font-size: 0.875rem;
+        padding: 4px 2px;
+    }
+
+    pre.intro-ascii {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ascii-card .ascii-art {
+        max-width: 100vw;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    pre.intro-ascii {
+        font-size: 0.425rem;
+        padding: 0.5rem;
+        color: var(--ctp-mocha-blue);
+    }
+
+    p {
+        font-size: 1rem;
     }
 }
 
